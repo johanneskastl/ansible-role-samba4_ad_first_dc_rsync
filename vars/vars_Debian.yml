@@ -1,0 +1,10 @@
+---
+# samba4_ad_first_dc_rsync/vars/vars_Debian.yml
+
+# packages for xinet.d
+xinetd_packages:
+  - xinetd
+  - update-inetd 
+
+path_to_sysvol: '/var/lib/samba/sysvol/'
+sysvol_replication_user: 'sysvol-repl'
