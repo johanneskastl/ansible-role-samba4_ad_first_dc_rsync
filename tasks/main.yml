@@ -1,0 +1,45 @@
+---
+# samba4_ad_first_dc_rsync/tasks/main.yml
+
+- name: "Load variables"
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "vars_{{ ansible_distribution }}.yml"
+    - "vars_{{ ansible_os_family }}.yml"
+
+- name: 'Install xinet.d packages'
+  package:
+    name: "{{ xinetd_packages }}"
+    state: 'present'
+
+- name: 'Create /etc/xinetd.d/rsync'
+  template:
+    src: 'etc_xinetd_rsync.j2'
+    dest: '/etc/xinetd.d/rsync'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+  notify:
+    - 'Restart xinetd'
+
+- name: 'Create /etc/rsyncd.conf'
+  template:
+    src: 'etc_rsyncd_conf.j2'
+    dest: '/etc/rsyncd.conf'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+- name: 'Create /etc/rsyncd.conf'
+  template:
+    src: 'etc_samba_rsync_secret.j2'
+    dest: '/etc/samba/rsync.secret'
+    owner: 'root'
+    group: 'root'
+    mode: '0600'
+
+- name: 'Start and enable xinetd'
+  service:
+    name: 'xinetd'
+    state: 'started'
+    enabled: 'true'
