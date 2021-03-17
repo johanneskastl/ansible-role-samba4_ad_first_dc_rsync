@@ -1,0 +1,18 @@
+galaxy_info:
+  role_name: 'samba4_ad_first_dc_rsync'
+  author: 'Johannes Kastl'
+  description: 'Setup the rsync service on the first DC of a Samba4 AD'
+  company: 'B1 Systems GmbH'
+
+  license: 'BSD-3-Clause'
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Debian
+    versions:
+    - 10
+
+  galaxy_tags: []
+
+dependencies: []
