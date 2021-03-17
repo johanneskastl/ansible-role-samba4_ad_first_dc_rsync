@@ -1,0 +1,13 @@
+service rsync
+{
+        disable         = no
+{% if allowed_ips is defined %}
+        only_from       = {{ allowed_ips | join (" ") }}
+{% endif %}
+        socket_type     = stream
+        wait            = no
+        user            = root
+        server          = /usr/bin/rsync
+        server_args     = --deamon
+        log_on_failure += USERID
+}
