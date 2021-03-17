@@ -1,0 +1,7 @@
+---
+# samba4_ad_first_dc_rsync/handlers/main.yml
+
+- name: 'Restart xinetd'
+  service:
+    name: 'xinetd'
+    state: 'restarted'
