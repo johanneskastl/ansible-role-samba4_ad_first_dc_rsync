@@ -1,0 +1,4 @@
+---
+# samba4_ad_first_dc_rsync/defaults/main.yml
+
+sysvol_replication_user: 'sysvol-repl'

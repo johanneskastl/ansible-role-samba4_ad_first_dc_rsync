@@ -7,4 +7,3 @@ xinetd_packages:
   - update-inetd 
 
 path_to_sysvol: '/var/lib/samba/sysvol/'
-sysvol_replication_user: 'sysvol-repl'
