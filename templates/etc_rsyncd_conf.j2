@@ -1,0 +1,8 @@
+[sysvol]
+path = {{ path_to_sysvol }}
+comment = Samba sysvol
+uid = root
+gid = root
+read only = yes
+auth users = {{ sysvol_replication_user }}
+secrets file = /etc/samba/rsync.secret
