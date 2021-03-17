@@ -30,7 +30,7 @@
     group: 'root'
     mode: '0644'
 
-- name: 'Create /etc/rsyncd.conf'
+- name: 'Create /etc/samba/rsync.secret'
   template:
     src: 'etc_samba_rsync_secret.j2'
     dest: '/etc/samba/rsync.secret'
