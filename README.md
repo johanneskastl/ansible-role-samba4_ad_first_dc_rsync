@@ -13,7 +13,10 @@ None.
 Role Variables
 --------------
 
-None.
+- `xinetd_packages`: list of packages to be installed
+- `path_to_sysvol`: path to the Samba4 AD sysvol directory
+- `sysvol_replication_user`: name of the replication user
+- `sysvol_replication_password`: password of the replication user
 
 Dependencies
 ------------
