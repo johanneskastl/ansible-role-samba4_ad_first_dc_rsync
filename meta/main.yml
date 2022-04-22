@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: 'samba4_ad_first_dc_rsync'
+  namespace: 'johanneskastl'
   author: 'Johannes Kastl'
   description: 'Setup the rsync service on the first DC of a Samba4 AD'
   company: 'B1 Systems GmbH'
