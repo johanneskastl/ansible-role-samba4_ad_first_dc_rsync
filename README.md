@@ -28,7 +28,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: 'johanneskastl.samba4_ad_first_dc_rsync' }
+         - role: 'johanneskastl.samba4_ad_first_dc_rsync'
 
 License
 -------
