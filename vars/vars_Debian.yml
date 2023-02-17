@@ -4,6 +4,6 @@
 # packages for xinet.d
 xinetd_packages:
   - xinetd
-  - update-inetd 
+  - update-inetd
 
 path_to_sysvol: '/var/lib/samba/sysvol/'
