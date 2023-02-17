@@ -1,7 +1,7 @@
 ---
 # samba4_ad_first_dc_rsync/tasks/main.yml
 
-- name: "Load variables"
+- name: 'Load variables'
   ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - "vars_{{ ansible_distribution }}.yml"
