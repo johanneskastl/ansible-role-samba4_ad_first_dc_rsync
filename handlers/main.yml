@@ -2,6 +2,6 @@
 # samba4_ad_first_dc_rsync/handlers/main.yml
 
 - name: 'Restart xinetd'
-  service:
+  ansible.builtin.service:
     name: 'xinetd'
     state: 'restarted'
